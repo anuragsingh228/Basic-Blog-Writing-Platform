@@ -1,0 +1,40 @@
+<body>
+  <section>
+    <div class="container" [ngClass]="isModeSignIn ? 'active' : ''">
+      <div class="user signinBx">
+
+        <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img1.jpg" alt="" /></div>
+        <div class="formBx">
+          <form (submit) = "onLogin(loginForm)" #loginForm = "ngForm">
+            <h2>Sign In</h2>
+            <input type="email" name="email" placeholder="E-mail address" name="email" ngModel #emailInput = "ngModel" required />
+            <input type="password" name="password" ngModel placeholder="Password" #passwordInput="ngModel" required />
+            <input type="submit" name="" value="Login" />
+            <p class="signup">
+              Don't have an account ?
+              <a style="cursor: pointer;"  (click)="toggleForm()">Sign Up.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form (submit) = "onSignUp(signUpForm)" #signUpForm = "ngForm">
+            <h2>Create an account</h2>
+            <input type="text" name="username" ngModel placeholder="Username" #usernameInput="ngModel" required />
+            <input type="email" name="email" ngModel placeholder="Email Address" #emailInput="ngModel" required />
+            <input type="password" name="password" ngModel placeholder="Create Password"  #passwordInput="ngModel" required />
+            <input type="password" name="confirmpassword" ngModel placeholder="Confirm Password" #confirmpasswordInput="ngModel" required  />
+            <input type="submit" name="" value="Sign Up" />
+            <p class="signup">
+              Already have an account ?
+              <a style="cursor: pointer;" (click)="toggleForm()">Sign in.</a>
+            </p>
+          </form>
+        </div>
+        <div class="imgBx"><img src="https://raw.githubusercontent.com/WoojinFive/CSS_Playground/master/Responsive%20Login%20and%20Registration%20Form/img2.jpg" alt="" /></div>
+      </div>
+    </div>
+  </section>
+
+</body>

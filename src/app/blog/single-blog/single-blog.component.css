@@ -1,0 +1,123 @@
+/* Quill editor - custom styling for preview */
+.preview-editor ::ng-deep .ql-container.ql-disabled {
+  border: none;
+}
+.preview-editor ::ng-deep .ql-editor {
+  font-family: "Inter";
+  padding: 0;
+}
+.preview-editor ::ng-deep .ql-editor p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+  /* line-height: 24px; */
+}
+.preview-editor ::ng-deep .ql-editor.ql-blank::before {
+  left: 0;
+  font-size: 14px;
+  font-family: "Inter";
+  font-style: italic;
+}
+
+/* == resets == */
+body {
+  margin: 0;
+  padding: 0;
+}
+/* == project == */
+body {
+  border-top: 3px #333 solid;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  color: rgb(34, 34, 34);
+}
+p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+hr {
+  color: rgb(170, 170, 170);
+}
+.wrapper {
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 50px;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+h1 a {
+  color: rgb(18, 18, 18);
+  text-decoration: none;
+}
+
+aside {
+  min-width: 20%;
+  float: right;
+  padding-left: 3px;
+}
+aside .banner {
+  width: 144px;
+  height: 568px;
+  background: #333;
+}
+/* for testing only */
+aside .banner {
+  background-image: url("https://24.media.tumblr.com/7b4a4370f39162bc29afd3e111078613/tumblr_mphzkjU2yg1qcnxbbo1_500.jpg");
+  background-position: -219px 0;
+  background-repeat: no-repeat;
+}
+
+.content {
+  float: left;
+  width: 76%;
+}
+
+.posts {
+  list-style-type: none;
+}
+
+.posts h5 {
+  color: rgb(170, 170, 170);
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+h2 {
+  color: rgb(53, 53, 53);
+  font-size: 24px;
+  letter-spacing: 0.13px;
+}
+
+.notes {
+  margin: 0px;
+}
+.notes a {
+  color: rgb(170, 170, 170);
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 4px;
+}
+
+@media (max-width: 580px) {
+  .content {
+    width: 100%;
+  }
+  .posts {
+    padding: 0 18px;
+  }
+  aside {
+    width: 100%;
+  }
+  .banner {
+    margin-left: 22px;
+  }
+}

@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #333;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #f8dd30;
+  width: max-content;
+  height: 2.8em;
+  padding: 0.5em;
+  border-radius: calc((2.8em + 1em) / 2);
+}
+.navbar .navbar__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.8em;
+  height: 2.8em;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.navbar .navbar__button svg {
+  width: 2em;
+  height: 2em;
+}
+.navbar .navbar__button svg path {
+  fill: black;
+}
+.navbar .navbar__items {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+}
+.navbar .navbar__items .navbar__item {
+  list-style-type: none;
+  min-width: 2.8em;
+  height: 2.8em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.navbar .navbar__items .navbar__item svg {
+  width: 2em;
+  height: 2em;
+}
+.navbar .navbar__items .navbar__item svg path {
+  fill: #677eff;
+}

@@ -1,0 +1,33 @@
+<div >
+  <app-navbar></app-navbar>
+</div>
+
+<div class="wrapper">
+  <div class="container">
+
+    <div class="content">
+
+      <ul class="posts">
+        <li>
+
+          <div class="postContent">
+            <h2>{{title}}</h2>
+            <quill-editor
+          class="preview-editor"
+				[ngModel]="content"
+				placeholder="No description set."
+				[modules]="viewOnlyEditorOption"
+				[readOnly]="true"
+			>
+			</quill-editor>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+
+
+  </div>
+</div>
+
