@@ -38,7 +38,8 @@ exports.signIn = async(req, res) => {
       );
       return res.status(200).json({
         idToken: authToken,
-        expiresIn: '86400000'
+        expiresIn: '86400000',
+        email: email
       });
     } catch (err) {
       return res.status(500).json({ errors: [{ msg: "Server Error" }] });

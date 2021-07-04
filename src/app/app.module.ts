@@ -11,6 +11,7 @@ import { CreateBlogComponent } from './blog/create-blog/create-blog.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SingleBlogComponent } from './blog/single-blog/single-blog.component';
+import { CommentsComponent } from './blog/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SingleBlogComponent } from './blog/single-blog/single-blog.component';
     BlogListComponent,
     NavbarComponent,
     CreateBlogComponent,
-    SingleBlogComponent
+    SingleBlogComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

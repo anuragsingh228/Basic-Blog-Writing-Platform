@@ -1,0 +1,59 @@
+<div>
+  <form (submit) = "onComment(commentForm)" #commentForm = "ngForm">
+    <textarea  rows=5 cols=50 type="text" label="comment" name="comment" ngModel placeholder="Focus the input and see the colors" #commentInput = "ngModel" required></textarea>
+    <button type="submit">Add Comment</button>
+  </form>
+</div>
+
+<div class="comment-thread">
+  <!-- Comment 1 start -->
+  <details open class="comment" id="comment-1" *ngFor="let comment of comments">
+      <a href="#comment-1" class="comment-border-link">
+          <span class="sr-only">Jump to comment-1</span>
+      </a>
+
+      <div >
+
+        <div class="comment-body">
+            <p>
+              {{comment.content}}
+            </p>
+
+            <!-- Reply form start -->
+            <div *ngIf="isuserauthor">
+              <form  class="reply-form " id="comment-1-reply-form" (submit) = "replyOnComment(comment._id,replyForm)" #replyForm = "ngForm">
+                <textarea rows="4" type="text" label="reply" name="reply" ngModel placeholder="Write a reply" #replyInput = "ngModel" required></textarea>
+                <button type="submit">Submit</button>
+                <button type="button" data-toggle="reply-form" data-target="comment-1-reply-form">Cancel</button>
+            </form>
+            </div>
+            <!-- Reply form end -->
+        </div>
+
+        <div class="replies" *ngIf="comment.reply.length">
+            <!-- Comment 2 start -->
+            <details open class="comment" id="comment-2" *ngFor ="let reply of comment.reply">
+                <a href="#comment-2" class="comment-border-link">
+                    <span class="sr-only">Jump to comment-2</span>
+                </a>
+
+
+                <div class="comment-body">
+                    <p>
+                       {{reply}}
+                    </p>
+                </div>
+            </details>
+
+            <!-- Comment 2 end -->
+        </div>
+      </div>
+
+
+  </details>
+  <!-- Comment 1 end -->
+
+
+
+
+</div>

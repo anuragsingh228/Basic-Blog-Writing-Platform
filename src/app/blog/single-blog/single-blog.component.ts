@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-single-blog',
@@ -12,6 +13,8 @@ export class SingleBlogComponent implements OnInit {
   id=""
   title=""
   content=""
+  author=""
+  blog : any
   viewOnlyEditorOption = {
 		toolbar: false,
 		clipboard: {
@@ -28,14 +31,17 @@ export class SingleBlogComponent implements OnInit {
 			}
 		});
     this.getBlog(this.id);
-
   }
 
   getBlog(id){
     this.blogService.getBlogById(id, (blog) => {
+      this.blog=blog;
       this.title=blog.title;
       this.content=blog.content;
+      this.author= blog.by;
     });
   }
+
+
 
 }

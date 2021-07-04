@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { BlogListComponent } from './blog/blog-list/blog-list.component';
 import { CreateBlogComponent } from './blog/create-blog/create-blog.component';
 import { SingleBlogComponent } from './blog/single-blog/single-blog.component';
+import { CommentsComponent } from './blog/comments/comments.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     path: 'blogs/:blogId',
     component: SingleBlogComponent
   },
+  { path: 'comments', component: CommentsComponent },
 ];
 
 @NgModule({

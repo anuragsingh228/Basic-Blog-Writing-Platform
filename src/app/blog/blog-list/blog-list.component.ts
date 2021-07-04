@@ -42,12 +42,12 @@ export class BlogListComponent implements OnInit {
     });
   }
 
-  async trimContent(content){
-    let trimcontent = await content.split(' ').slice(0,2).join('+');
-    trimcontent=trimcontent+"...";
-    console.log(trimcontent);
-    return trimcontent;
-  }
+  // async trimContent(content){
+  //   let trimcontent = await content.split(' ').slice(0,2).join('+');
+  //   trimcontent=trimcontent+"...";
+  //   console.log(trimcontent);
+  //   return trimcontent;
+  // }
 
 
 }

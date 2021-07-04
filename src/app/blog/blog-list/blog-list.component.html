@@ -9,14 +9,6 @@
         <div class="content">
           <h2>01</h2>
           <h3>{{blog.title}}</h3>
-          <quill-editor
-          class="preview-editor"
-				[ngModel]="blog.content "
-				placeholder="No description set."
-				[modules]="viewOnlyEditorOption"
-				[readOnly]="true"
-			>
-			</quill-editor>
           <a [routerLink]="'blogs/'+ blog._id"> Read More</a>
         </div>
       </div>

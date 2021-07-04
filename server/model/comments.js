@@ -3,9 +3,9 @@ var  Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId;
 
 // Create Schema
-const BlogSchema = new Schema({
+const CommentSchema = new Schema({
 
-  title: {
+  by: {
     type: String,
     required: true,
   },
@@ -13,14 +13,13 @@ const BlogSchema = new Schema({
     type: String,
     required: true,
   },
-  by: {
-    type: String,
-    required: true
+  reply:{
+    type: [String],
+    default: []
   },
-  likes: {
-    type: Number,
-    default: 0
+  blogid: {
+    type: ObjectId
   }
 });
 
-module.exports = User = mongoose.model("blog", BlogSchema);
+module.exports = User = mongoose.model("comment", CommentSchema);

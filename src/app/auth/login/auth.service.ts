@@ -36,11 +36,13 @@ export class AuthService {
 
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
+    localStorage.setItem('user_email', authResult.email);
 }
 
 logout() {
   localStorage.removeItem("id_token");
   localStorage.removeItem("expires_at");
+  localStorage.removeItem("user_email");
 }
 
 public isLoggedIn() {
